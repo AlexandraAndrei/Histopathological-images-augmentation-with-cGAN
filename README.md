@@ -8,5 +8,6 @@ rating synthetic images by applying a Conditional Generative Adversarial Network
 that belong to different tissue types and preserve the general structure and features of the source classes. We evaluate the quality of the generated images by conducting perceptual ex-
 periments with pathologists to measure the human confusion rate as well as via the Fr ́echet Inception Distance metric.
 
+![cGAN](https://user-images.githubusercontent.com/92714719/200405358-39a5e0fd-d14c-465c-bb47-7167b9180167.png)
 
 Index Terms— Histopathology, dataset augmentation, synthetic medical images, Generative Adversarial Networks.
