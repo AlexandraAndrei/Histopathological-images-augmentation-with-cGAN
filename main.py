@@ -105,6 +105,19 @@ def define_generator(latent_dim, n_classes=8):
     concat = Concatenate()([gen, label_embedding])
     gen = Conv2DTranspose(128, (4, 4), strides=(2, 2), padding='same')(concat)
     gen = LeakyReLU(alpha=0.2)(gen)
+  
+  	gen = Conv2DTranspose(128, (4, 4), strides=(2, 2), padding='same')(gen)
+  	gen = LeakyReLU(alpha=0.2)(gen)
+
+    gen = Conv2DTranspose(128, (4, 4), strides=(2,2), padding='same')(gen)
+  	gen = LeakyReLU(alpha=0.2)(gen)
+
+  	gen = Conv2DTranspose(128, (4, 4), strides=(2, 2), padding='same')(gen)
+  	gen = LeakyReLU(alpha=0.2)(gen)
+  
+  	gen = Conv2DTranspose(128, (4, 4), strides=(2,2), padding='same')(gen)
+	  gen = LeakyReLU(alpha=0.2)(gen)
+  
     out_layer = Conv2D(3, (7, 7), activation='tanh', padding='same')(gen)
 
     model = Model([in_latent, in_label], out_layer)
